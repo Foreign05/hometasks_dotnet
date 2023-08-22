@@ -1,5 +1,8 @@
 ﻿
 
+
+
+
 int holiday1 = 6;
 int holiday2 = 0;
 Console.WriteLine("What is the day today?");
