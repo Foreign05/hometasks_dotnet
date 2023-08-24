@@ -4,49 +4,125 @@
 // 23432 -> да
 // 12821 -> да
 
-//                                                 НЕОКОНЧЕНО
-
-
-
-string[] arr = new string[5];
-
-for (int i = 0; i < arr.Length; i++)
+while (true)
 {
-    arr[i] = Console.ReadLine();
+    string input = Console.ReadLine();
+    int number;
 
-    int len = arr[i].Length;
-
-    foreach (var value in arr)
+    if (!int.TryParse(input, out number))
     {
-        int number;
-        bool success = int.TryParse(value, out number);
-
-        if (success)
+        Console.WriteLine("Try to type just numbers");
+    } 
+    else
+    {
+        if (input.Length != 5) 
         {
-            
-            while (len == 5)
+            Console.WriteLine("Input is to short");
+        }
+        else 
+        {
+            if (input[0] == input[4] && input[1] == input[3])
             {
-                if (true)
-                {
-                    Array.Reverse(arr);
-                    foreach (var item in arr)
-                    {
-                        Console.WriteLine(item);
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Your numer have to consist 5 chars");
-                }
+                Console.WriteLine("yes");
                 break;
             }
-
+            else
+            {
+                Console.WriteLine("no");
+                break;
+            }
         }
-        else
-        {
-            Console.Clear();
-            Console.WriteLine("Type just numbers");
-        }
-    }
-    
+    }   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// string[] arr = new string[5];
+
+// for (int i = 0; i < arr.Length; i++)
+// {
+//     arr[i] = Console.ReadLine();
+
+//     int len = arr[i].Length;
+
+//     foreach (var value in arr)
+//     {
+//         int number;
+//         bool success = int.TryParse(value, out number);
+
+//         if (success)
+//         {
+            
+//             while (len == 5)
+//             {
+//                 if (true)
+//                 {
+//                     Array.Reverse(arr);
+//                     foreach (var item in arr)
+//                     {
+//                         Console.WriteLine(item);
+//                     }
+//                 }
+//                 else
+//                 {
+//                     Console.WriteLine("Your numer have to consist 5 chars");
+//                 }
+//                 break;
+//             }
+
+//         }
+//         else
+//         {
+//             Console.Clear();
+//             Console.WriteLine("Type just numbers");
+//         }
+//     }
+    
+// }
